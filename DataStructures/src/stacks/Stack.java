@@ -7,6 +7,7 @@ class Item<T>{
 	Item next;	
 }
 
+
 public class Stack<T> {
 	private Item<T> top;
 	
