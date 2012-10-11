@@ -25,6 +25,10 @@ public class Stack<T> {
 		return temp;
 	}
 	
+	public void printStack(){
+		
+	}
+	
 	
 	public static void main(String[] a){
 		Stack<Integer> myst = new Stack<Integer>();
