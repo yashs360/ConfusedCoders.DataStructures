@@ -1,12 +1,9 @@
 package tree;
 
-class Node{
-	boolean isLeaf;
-	Node[] edges = new Node[26];
-}
+import common.TrieNode;
 
 public class Trie{
-	Node root = new Node();
+	TrieNode root = new TrieNode();
 	
 	public void insert(String in){
 		if(null==in)
@@ -19,11 +16,11 @@ public class Trie{
 		
 		int tmpLen = len;
 		int index = 0;
-		Node tmp = root;
+		TrieNode tmp = root;
 		while(len>0){
 			index = getIndex(in.charAt(tmpLen-len));
 			if(tmp.edges[index]==null)
-				tmp.edges[index] = new Node();
+				tmp.edges[index] = new TrieNode();
 			
 			tmp = tmp.edges[index];
 			len--;
@@ -45,7 +42,7 @@ public class Trie{
 		
 		int index = 0;
 		int tmpLen = len;
-		Node tmp = root;
+		TrieNode tmp = root;
 		int lcpLen=0;
 		while(len>0){
 			index = getIndex(in.charAt(tmpLen-len));

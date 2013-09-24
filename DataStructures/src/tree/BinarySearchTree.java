@@ -1,16 +1,7 @@
 package tree;
 
-class TreeNode{
-	int data;
-	TreeNode right;
-	TreeNode left;
-	
-	public TreeNode(){}
-	
-	public TreeNode(int data){
-		this.data =  data;
-	}
-}
+import common.TreeNode;
+
 
 
 public class BinarySearchTree {
