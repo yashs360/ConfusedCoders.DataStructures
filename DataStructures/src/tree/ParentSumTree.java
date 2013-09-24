@@ -26,6 +26,20 @@ public class ParentSumTree {
 		if(node==null)
 			return 0;
 		
+		if(node.left ==null && node.right==null)
+			return node.data;
+		
+		int leftdata = parentSum(node.left);
+		int rightdata = parentSum(node.right);
+		node.data = leftdata + rightdata;
+		return node.data;
+	}
+	
+	
+	public int parentSumPlusItself(TreeNode node){
+		if(node==null)
+			return 0;
+		
 		int leftdata = parentSum(node.left);
 		int rightdata = parentSum(node.right);
 		node.data += leftdata + rightdata;
